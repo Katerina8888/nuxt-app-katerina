@@ -12,6 +12,10 @@
 <script lang="ts" setup>
 // obsah závorek musí matchnout název proměnné souboru
 const { id } = useRoute().params
+// const uri = 'https://fakestoreapi.com/products' + id
+
+//fetch the product
+// const { data: product }
 
 definePageMeta({
   layout: 'products',
