@@ -12,6 +12,10 @@
 <script lang="ts" setup>
 // obsah závorek musí matchnout název proměnné souboru
 const { id } = useRoute().params
+
+definePageMeta({
+  layout: 'products',
+})
 </script>
 
 <style></style>
