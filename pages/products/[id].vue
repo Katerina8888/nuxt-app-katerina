@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>Product details for {{ id }}</p>
-    <div>
+    <div class="bg-red-500">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloremque
       aliquam consequatur, suscipit vero porro corrupti cumque nostrum dolorem
       ullam!
