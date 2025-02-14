@@ -1,5 +1,5 @@
 <template>
-  <div v-if="product" class="card">
+  <div>
     <div class="grid grid-cols-2 gap-10">
       <div class="p-7">
         <img
@@ -16,9 +16,6 @@
         <p class="mb-7">{{ product.description }}</p>
       </div>
     </div>
-  </div>
-  <div v-else>
-    <p>Loading...</p>
   </div>
 </template>
 
