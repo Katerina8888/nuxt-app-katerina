@@ -1,21 +1,23 @@
 <template>
-  <div>
-    <p>Product details for {{ id }}</p>
-    <div class="bg-red-500">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloremque
-      aliquam consequatur, suscipit vero porro corrupti cumque nostrum dolorem
-      ullam!
-    </div>
+  <div v-if="product">
+    <p>{{ product.title }}</p>
+    <p>{{ product.price }}</p>
+    <p>{{ product.id }}</p>
+  </div>
+  <div v-else>
+    <p>Loading...</p>
   </div>
 </template>
 
 <script lang="ts" setup>
+import type { Data } from '~/types/types'
+
 // obsah závorek musí matchnout název proměnné souboru
 const { id } = useRoute().params
-// const uri = 'https://fakestoreapi.com/products' + id
+const uri = 'https://fakestoreapi.com/products/' + id
 
 //fetch the product
-// const { data: product }
+const { data: product } = await useFetch<Data>(uri)
 
 definePageMeta({
   layout: 'products',
