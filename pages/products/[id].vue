@@ -1,12 +1,5 @@
 <template>
-  <div v-if="product">
-    <p>{{ product.title }}</p>
-    <p>{{ product.price }}</p>
-    <p>{{ product.id }}</p>
-  </div>
-  <div v-else>
-    <p>Loading...</p>
-  </div>
+  <ProductDetails :product="product" />
 </template>
 
 <script lang="ts" setup>
@@ -23,5 +16,3 @@ definePageMeta({
   layout: 'products',
 })
 </script>
-
-<style></style>
